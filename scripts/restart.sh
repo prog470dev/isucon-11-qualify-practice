@@ -17,5 +17,8 @@ sudo rm /var/log/mysql/mysql-slow.log
 sudo systemctl restart mysql
 
 # application
+cd ../go
+go build -o isucondition
+cd `dirname $0`
 sudo systemctl daemon-reload
 sudo systemctl restart isucondition.go.service
